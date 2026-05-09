@@ -242,3 +242,79 @@ hr.divider {
     color: var(--text-primary);
     margin: 0 auto;
 }
+
+/* ============================================
+   MOBILE RESPONSIVENESS
+   ============================================ */
+
+/* Small devices (≤ 576px) */
+@media (max-width: 576px) {
+
+    /* Hero: shrink height and adjust padding so content is reachable */
+    .masthead {
+        min-height: auto;
+        padding-top: 5rem;
+        padding-bottom: 3rem;
+    }
+
+    /* Hero text scaling */
+    .masthead h1.display-3 {
+        font-size: 2.4rem;
+    }
+    .masthead .h4 {
+        font-size: 1rem;
+    }
+    .masthead .lead {
+        font-size: 0.95rem;
+    }
+
+    /* Hero buttons: full width, stacked */
+    .masthead .btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Section spacing tightened */
+    .page-section {
+        padding-top: 2.5rem !important;
+        padding-bottom: 2.5rem !important;
+    }
+
+    /* Contact social row: wrap properly with tighter gap */
+    .icon-box {
+        width: 60px;
+        height: 60px;
+    }
+
+    /* Navbar: disable underline animation on mobile to avoid left-offset glitch */
+    #mainNav .nav-link::after {
+        display: none;
+    }
+}
+
+/* Medium devices (577px – 768px) */
+@media (min-width: 577px) and (max-width: 768px) {
+
+    .masthead {
+        min-height: auto;
+        padding-top: 5.5rem;
+        padding-bottom: 3rem;
+    }
+
+    .masthead h1.display-3 {
+        font-size: 2.8rem;
+    }
+}
+
+/* Tablets (769px – 991px) */
+@media (min-width: 769px) and (max-width: 991px) {
+
+    .masthead {
+        padding-top: 6rem;
+        padding-bottom: 2rem;
+    }
+
+    .masthead h1.display-3 {
+        font-size: 3rem;
+    }
+}
