@@ -253,8 +253,8 @@ hr.divider {
     /* Hero: shrink height and adjust padding so content is reachable */
     .masthead {
         min-height: auto;
-        padding-top: 5rem;
-        padding-bottom: 3rem;
+        padding-top: 7.5rem;
+        padding-bottom: 3.5rem;
     }
 
     /* Hero text scaling */
@@ -297,8 +297,8 @@ hr.divider {
 
     .masthead {
         min-height: auto;
-        padding-top: 5.5rem;
-        padding-bottom: 3rem;
+        padding-top: 7.5rem;
+        padding-bottom: 3.5rem;
     }
 
     .masthead h1.display-3 {
@@ -310,8 +310,8 @@ hr.divider {
 @media (min-width: 769px) and (max-width: 991px) {
 
     .masthead {
-        padding-top: 6rem;
-        padding-bottom: 2rem;
+        padding-top: 8rem;
+        padding-bottom: 3rem;
     }
 
     .masthead h1.display-3 {
