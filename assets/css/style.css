@@ -5,12 +5,9 @@
 
 :root {
     /* Color Palette */
-    --accent-blue-1: 217, 91%, 60%;     /* #3b82f6 */
-    --accent-blue-2: 199, 89%, 48%;     /* #0ea5e9 */
-    
-    --primary-accent: hsl(var(--accent-blue-1));
-    --primary-gradient: linear-gradient(135deg, hsl(var(--accent-blue-1)) 0%, hsl(var(--accent-blue-2)) 100%);
-    --primary-gradient-hover: linear-gradient(135deg, hsl(var(--accent-blue-1), 0.95) 0%, hsl(var(--accent-blue-2), 0.95) 100%);
+    --primary-accent: #3b82f6;
+    --primary-gradient: linear-gradient(135deg, #3b82f6 0%, #0ea5e9 100%);
+    --primary-gradient-hover: linear-gradient(135deg, #2563eb 0%, #0284c7 100%);
     --primary-light: rgba(59, 130, 246, 0.08);
     --primary-glow: rgba(59, 130, 246, 0.15);
     
