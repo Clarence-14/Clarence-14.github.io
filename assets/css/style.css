@@ -573,6 +573,7 @@ hr.divider {
 .social-subtitle {
     font-size: 0.75rem;
     color: var(--text-lighter);
+    word-break: break-all;
 }
 
 .social-item-link:hover .social-subtitle {
