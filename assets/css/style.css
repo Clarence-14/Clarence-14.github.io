@@ -688,6 +688,18 @@ footer.bg-dark {
     }
 }
 
+/* Mobile Navigation Drawer Polish */
+@media (max-width: 991.98px) {
+    #mainNav .navbar-collapse {
+        background-color: var(--bg-secondary);
+        margin-top: 0.8rem;
+        padding: 1.2rem 1.5rem;
+        border-radius: var(--radius-md);
+        box-shadow: var(--shadow-md);
+        border: 1px solid var(--border-color);
+    }
+}
+
 /* Medium devices (577px – 768px) */
 @media (min-width: 577px) and (max-width: 768px) {
     .masthead {
@@ -697,7 +709,7 @@ footer.bg-dark {
     }
 
     .masthead h1.display-3 {
-        font-size: 3rem;
+        font-size: 2.8rem;
     }
     
     .hero-image-wrapper {
@@ -714,6 +726,6 @@ footer.bg-dark {
     }
 
     .masthead h1.display-3 {
-        font-size: 3.5rem;
+        font-size: 3.2rem;
     }
 }
