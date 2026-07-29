@@ -1,6 +1,45 @@
 // main.js - Modern Interaction System
 
 document.addEventListener('DOMContentLoaded', () => {
+    // 0. Theme Toggle System
+    const themeToggleBtn = document.getElementById('themeToggle');
+    const updateToggleIcon = (theme) => {
+        if (!themeToggleBtn) return;
+        const icon = themeToggleBtn.querySelector('.theme-toggle-icon');
+        if (icon) {
+            if (theme === 'dark') {
+                icon.className = 'fas fa-sun theme-toggle-icon';
+                themeToggleBtn.setAttribute('title', 'Switch to Light Mode');
+                themeToggleBtn.setAttribute('aria-label', 'Switch to Light Mode');
+            } else {
+                icon.className = 'fas fa-moon theme-toggle-icon';
+                themeToggleBtn.setAttribute('title', 'Switch to Dark Mode');
+                themeToggleBtn.setAttribute('aria-label', 'Switch to Dark Mode');
+            }
+        }
+    };
+
+    const currentTheme = document.documentElement.getAttribute('data-theme') || 'light';
+    updateToggleIcon(currentTheme);
+
+    if (themeToggleBtn) {
+        themeToggleBtn.addEventListener('click', () => {
+            const activeTheme = document.documentElement.getAttribute('data-theme');
+            const newTheme = activeTheme === 'dark' ? 'light' : 'dark';
+            document.documentElement.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            updateToggleIcon(newTheme);
+        });
+    }
+
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+        if (!localStorage.getItem('theme')) {
+            const newSystemTheme = e.matches ? 'dark' : 'light';
+            document.documentElement.setAttribute('data-theme', newSystemTheme);
+            updateToggleIcon(newSystemTheme);
+        }
+    });
+
     // 1. Current Year for Footer
     const yearSpan = document.getElementById('year');
     if (yearSpan) {
